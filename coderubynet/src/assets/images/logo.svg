@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="122px" height="20px" viewBox="0 0 122 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="226px" height="36px" viewBox="0 0 226 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
     <title>Slice 1</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="20" font-family="ModeNine" font-weight="normal">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="36" font-family="ModeNine" font-weight="normal">
         <text id="RubyCoders" fill="#F8E71C">
-            <tspan x="0" y="12">RubyCoders</tspan>
+            <tspan x="0" y="28">RubyCoders</tspan>
         </text>
     </g>
 </svg>

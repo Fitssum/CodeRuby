@@ -1,9 +1,10 @@
+
 <div class="row">
-  <div class="columns small-12 medium-6 large-4 events">
+  <div class="columns small-12 medium-6 large-4 events" *ngFor="let event of events">
     <div class="event-container">
       <div class="row">
         <div class="columns small-12 large-10">
-          <a routerLink="/" class="event-title">create a mean stack app in angular 4</a>
+          <a routerLink="/details/{{ event._id }}" class="event-title">{{ event.title }}</a>
         </div>
         <div class="columns small-12 large-2 show-for-large">
           <a href="#" target="_blank" class="external">
@@ -22,8 +23,8 @@
           </a>
         </div>
       </div>
-      <p>description here</p>
-      <a routerLink="/" class="cta-btn btn2">More Info</a>
+      <p>{{ event.description }}</p>
+      <a routerLink="/details/{{ event._id }}" class="cta-btn btn2">More Info</a>
     </div>
   </div>
 </div>
