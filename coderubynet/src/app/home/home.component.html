@@ -23,7 +23,7 @@
           </a>
         </div>
       </div>
-      <p>{{ event.description }}</p>
+      <p>{{ event.description | length: 130 }}</p>
       <a routerLink="/details/{{ event._id }}" class="cta-btn btn2">More Info</a>
     </div>
   </div>
