@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EventService } from '../event.service';
 import { Event } from '../event';
-
-
-//to grab the id from the url
 import { Router, ActivatedRoute } from '@angular/router';
-// import { routerTransition } from '../animations';
 
 @Component({
   selector: 'app-details',
@@ -21,10 +17,10 @@ export class DetailsComponent implements OnInit {
   ngOnInit() {
     this.router.params.subscribe((params) => {
 
-      let id = params['id']; //the 'id' is coming from app-routing.module.ts!!
+      let id = params['id'];
 
-      this._eventService.getEvent(id) //getEvent method is defined in the 'post.service.ts'
-        .subscribe(res => this.event = res);//.event is defined in line 16
+      this._eventService.getEvent(id)
+        .subscribe(res => this.event = res);
     })
   }
 
