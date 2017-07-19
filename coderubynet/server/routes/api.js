@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
+const event = require('../models/event');
 
 const db = "mongodb://fitsum.wolde:habeshawi2012@ds163672.mlab.com:63672/coderubynet";
 
