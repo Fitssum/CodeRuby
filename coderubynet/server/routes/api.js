@@ -20,7 +20,18 @@ router.get('/events', function(req, res) {
       console.log('Error getting the events');
     } else {
       res.json(events);
-      console.log(events);
+    }
+  });
+});
+
+router.get('/details/:id', function(req, res) {
+  console.log('Requesting event');
+  event.findById(req.params.id)
+  .exec(function(err, event) {
+    if (err) {
+      console.log('Error getting the event');
+    } else {
+      res.json(event);
     }
   });
 });
