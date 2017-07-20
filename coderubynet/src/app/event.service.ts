@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers, RequestOptions } from '@angular/http';
 // allows to transform from api to json data
 import 'rxjs/add/operator/map';
+import { Event } from './event';
 
 @Injectable()
 export class EventService {
@@ -20,4 +21,11 @@ export class EventService {
     .map(result => this.result = result.json());
   }
 
+  insertEvent(event: Event) {
+    let headers = new Headers({ 'content-type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+
+    return this._http.post('/api/events', JSON.stringify(event), options)
+      .map(result => this.result = result.json());
+  }
 }
