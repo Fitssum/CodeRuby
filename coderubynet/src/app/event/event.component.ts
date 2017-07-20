@@ -18,6 +18,7 @@ export class EventComponent implements OnInit {
 
     this.eventForm = fb.group({
       'title' : [null, Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(75)])],
+      'date' : [null, Validators.required],
       'description' : [null, Validators.compose([Validators.required, Validators.minLength(10), Validators.maxLength(75)])],
       'url' : [null, Validators.required]
     });

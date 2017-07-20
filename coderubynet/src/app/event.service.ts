@@ -22,7 +22,7 @@ export class EventService {
   }
 
   insertEvent(event: Event) {
-    let headers = new Headers({ 'content-type': 'application/json' });
+    let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
 
     return this._http.post('/api/events', JSON.stringify(event), options)
