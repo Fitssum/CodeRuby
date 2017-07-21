@@ -7,11 +7,11 @@
   <form [formGroup]="eventForm" (ngSubmit)="addEvent(eventForm.value)">
     <div class="row">
       <div class="columns small-12 medium-6">
-        <label>Title
-          <input type="text" name="title" [formControl]="eventForm.controls['title']">
-        </label>
         <label>Date
           <input type="date" name="date" [formControl]="eventForm.controls['date']">
+        </label>
+        <label>Title
+          <input type="text" name="title" [formControl]="eventForm.controls['title']">
         </label>
         <div class="alert" *ngIf="!eventForm.controls['title'].valid && eventForm.controls['title'].touched">You must specify a title that's at least 15 characters long.</div>
       </div>
@@ -27,7 +27,7 @@
           <textarea name="description" id="description" [formControl]="eventForm.controls['description']"></textarea>
         </label>
         <div class="alert" *ngIf="!eventForm.controls['description'].valid && eventForm.controls['description'].touched">You must specify a description that's at least 500 characters long.</div>
-        <input type="submit" class="cta-btn filled" value="Add Event">
+        <input type="submit" class="cta-btn filled" value="Add Event" [disabled]="!eventForm.valid">
       </div>
   </form>
 </div>
