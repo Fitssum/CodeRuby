@@ -1,14 +1,21 @@
-# Coderubynet
+## About the App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
+RubyCoder is a meetup post hub for Ruby developers. This app is built with MEAN Stack based on:
+
+- MongoDB
+- Express
+- Angular (version 4)
+- Nodejs
+
+The project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.1.
+
+MongoDB is setup as a service in Mlab (http://www.mlab.com/).
+
+Front-end layout design is made with SCSS for each components.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
 
 ## Build
 
@@ -26,3 +33,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Unsolved Problems
+
+The App is fully functional as it stands. However, Update and Delete CRUD are being implemented. The app will also include users as an additional model.
