@@ -1,33 +1,33 @@
+
 <div class="body-blur">
-  <div class="row">
-    <h1>Announce Event</h1>
+  <div class="row columns">
+    <h1>Add Event</h1>
   </div>
 
   <form [formGroup]="eventForm" (ngSubmit)="addEvent(eventForm.value)">
-
     <div class="row">
       <div class="columns small-12 medium-6">
-        <label>Title of Announcement
+        <label>Title
           <input type="text" name="title" [formControl]="eventForm.controls['title']">
         </label>
-      </div>
-      <div class="columns small-12 medium-6">
-        <label>URL
-          <input type="text" name="url" [formControl]="postForm.controls['url']">
-        </label>
-      </div>
-      <div class="columns small-12 medium-6">
         <label>Date
           <input type="date" name="date" [formControl]="eventForm.controls['date']">
         </label>
+        <div class="alert" *ngIf="!eventForm.controls['title'].valid && eventForm.controls['title'].touched">You must specify a title that's at least 15 characters long.</div>
+      </div>
+      <div class="columns small-12 medium-6">
+        <label>URL
+          <input type="text" name="url" [formControl]="eventForm.controls['url']">
+        </label>
+        <div class="alert" *ngIf="!eventForm.controls['url'].valid && eventForm.controls['url'].touched">You must specify a URL.</div>
       </div>
     </div>
-
       <div class="row columns">
         <label>Description
           <textarea name="description" id="description" [formControl]="eventForm.controls['description']"></textarea>
         </label>
-        <input type="submit" class="cta-btn filled" value="Event Announcement" [disabled]="!eventForm.valid">
+        <div class="alert" *ngIf="!eventForm.controls['description'].valid && eventForm.controls['description'].touched">You must specify a description that's at least 500 characters long.</div>
+        <input type="submit" class="cta-btn filled" value="Add Event">
       </div>
   </form>
 </div>
