@@ -52,30 +52,4 @@ router.post('/events', function(req, res) {
   });
 });
 
-Event.findById(req.params.eventId, function (err, event) {
-    if (err) {
-        res.status(500).send(err);
-    } else {
-        event.title = req.body.title || event.title;
-        event.description = req.body.description || event.description;
-        event.date = req.body.date || event.date;
-        event.url = req.body.url || event.url;
-
-        event.save(function (err, event) {
-            if (err) {
-                res.status(500).send(err)
-            }
-            res.json(event);
-        });
-    }
-});
-
-Event.findByIdAndRemove(req.params.eventId, function (err, event) {
-    var response = {
-        message: "Event successfully deleted",
-        id: event._id
-    };
-    res.json(response);
-});
-
 module.exports = router;
